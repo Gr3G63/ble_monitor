@@ -10,11 +10,12 @@ def parse_michelin_tms(self, data: bytes, mac: bytes):
     """Parser for Michelin TMS."""
     msg_length = len(data)
     device_type = "TMS"
-    result = {"type": device_type}
+    firmware = "TMS"
+    result = {"firmware": firmware}
     frame_type = data[5]
     
     if frame_type in [0x03, 0x04]:
-        if msg_length != 14:
+        if msg_length != 18:
                 _LOGGER.error("Found %s bytes from sensor: %s", msg_length, to_mac(mac))
                 return
         (raw_temp, raw_volt, absolute_pressure_bar, tyre_id, steps, frame_counter) = unpack(
@@ -41,7 +42,7 @@ def parse_michelin_tms(self, data: bytes, mac: bytes):
 
     result.update({
         "mac": to_unformatted_mac(mac),
-        "firmware": "TMS",
+        "firmware": firmware,
         "type": device_type,
         "packet": "no packet id",
         "data": True

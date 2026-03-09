@@ -2355,7 +2355,7 @@ MANUFACTURER_DICT = {
     'ST10'                    : 'MOCREO',
     'MS1'                     : 'MOCREO',
     'MS2'                     : 'MOCREO',
-	'TMS'                     : 'MICHELIN',
+	'TMS'                     : 'Michelin',
     'S-MATE'                  : 'Sonoff',
     'R5'                      : 'Sonoff',
 }
@@ -2441,7 +2441,7 @@ AUTO_MANUFACTURER_DICT = {
     'XMOSB01XS'               : 'Xiaomi',
     'RS1BB'                   : 'Linptech',
     'ES3'                     : 'Linptech',
-	'TMS'                     : 'MICHELIN',
+	'TMS'                     : 'Michelin',
 }
 
 
