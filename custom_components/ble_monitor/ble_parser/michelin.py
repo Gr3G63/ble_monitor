@@ -29,7 +29,7 @@ def parse_michelin_tms(self, data: bytes, mac: bytes):
             "pressure": absolute_pressure_bar,
             "count": frame_counter,
             "steps": steps,
-            "text": tyre_id,
+            "text": tyre_id.decode('utf-8', errors='replace'),
         })
 
     else:
