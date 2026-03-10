@@ -6,6 +6,7 @@ from .helpers import to_mac, to_unformatted_mac
 
 _LOGGER = logging.getLogger(__name__)
 
+
 def parse_michelin_tms(self, data: bytes, mac: bytes):
     """Parser for Michelin TMS."""
     msg_length = len(data)
@@ -13,7 +14,6 @@ def parse_michelin_tms(self, data: bytes, mac: bytes):
     firmware = "TMS"
     result = {"firmware": firmware}
     frame_type = data[5]
-    
     if frame_type in [0x03, 0x04]:
         if msg_length != 18:
                 _LOGGER.error("Found %s bytes from sensor: %s", msg_length, to_mac(mac))

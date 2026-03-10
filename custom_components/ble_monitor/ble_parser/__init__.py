@@ -29,6 +29,7 @@ from .jinou import parse_jinou
 from .kegtron import parse_kegtron
 from .kkm import parse_kkm
 from .laica import parse_laica
+from .michelin import parse_michelin_tms
 from .mikrotik import parse_mikrotik
 from .miscale import parse_miscale
 from .moat import parse_moat
@@ -50,7 +51,6 @@ from .thermopro import parse_thermopro
 from .tilt import parse_tilt
 from .xiaogui import parse_xiaogui
 from .xiaomi import parse_xiaomi
-from .michelin import parse_michelin_tms
 
 _LOGGER = logging.getLogger(__name__)
 

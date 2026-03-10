@@ -23,3 +23,4 @@ class TestMichelin:
         assert sensor_msg["steps"] == 1
         assert sensor_msg["text"] == "PVC"
         assert sensor_msg["rssi"] == -68
+        
